@@ -13,10 +13,4 @@ jobs:
       - name: Install slidev
         run:  npm i -g @slidev/cli
       - name: Build
-        run: slidev build --base nong
-      - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run build --base nong
